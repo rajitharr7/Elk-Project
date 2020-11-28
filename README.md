@@ -94,7 +94,7 @@ We have installed the following Beats on these machines:
 Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 Filebeat collect the data about the file system and Metricbeat collects data about machine metrics and statistics(Examples of the data are CPU and RAM usage).
 
@@ -104,8 +104,9 @@ agent.hostname:Web-1 agent.id:28dad0fd-1fd8-43ea-bd9e-7c998f40e7e2 agent.ephemer
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+- Copy the config file to /etc/ansible/roles/files directory.
+- Update the host file to include web servers ip addresses
+  
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
