@@ -72,7 +72,9 @@ What is the main advantage of automating configuration with Ansible?
   Easily configure multiple servers and enable automation
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+
+In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+
 1. Creat virtual machines and other network infrastructure like Network security group, load balancer elc..
 2. Download and configure elk-docker container
 3. Push the configuration to the web servers
@@ -85,13 +87,18 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+  10.0.0.5
+  10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+Filebeat collect the data about the file system and Metricbeat collects data about machine metrics and statistics(Examples of the data are CPU and RAM usage).
+
+agent.hostname:Web-1 agent.id:28dad0fd-1fd8-43ea-bd9e-7c998f40e7e2 agent.ephemeral_id:d6fa5b0b-66e8-4f88-882b-d65fa5659c28 agent.type:filebeat agent.version:7.6.1 process.name:filebeat process.pid:1097 log.file.path:/var/log/syslog log.offset:575,198 fileset.name:syslog message:2020-11-28T10:13:07.472Z#011INFO#011[monitoring]#011log/log.go:145#011Non-zero metrics in the last 30s#011{"monitoring": {"metrics": {"beat":{"cpu":{"system":{"ticks":26220,"time":{"ms":5}},"total":{"ticks":235130,"time":{"ms":10},"value":235130},"user":{"ticks":208910,"time":{"ms":5}}},"handles":{"limit":{"hard":4096,"soft":1024},"open":10},"info":{"ephemeral_id":"d6fa5b0b-66e8-4f88-882b-d65fa5659c28","uptime":{"ms":625472421}},"memstats":{"gc_next":9903840,"memory_alloc":7898032,"memory_total":10609015112},"runtime":
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
